@@ -18,15 +18,14 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
     new HtmlWebpackPlugin({
       template: paths.html
     }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: true
-    })
+    // new BundleAnalyzerPlugin({
+    //   openAnalyzer: true
+    // })
   ];
 
   if (options.isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(new ReactRefreshWebpackPlugin());
-    // plugins.push(new BundleAnalyzerPlugin({}));
   }
 
   return plugins;
