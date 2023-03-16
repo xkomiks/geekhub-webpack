@@ -21,6 +21,9 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
     // new BundleAnalyzerPlugin({
     //   openAnalyzer: true
     // })
+    new webpack.DefinePlugin({
+      __DEV__: JSON.stringify(options.isDev)
+    }),
   ];
 
   if (options.isDev) {
