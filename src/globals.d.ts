@@ -14,6 +14,7 @@ declare module '*.jpg';
 declare module '*.jpeg';
 
 declare const __DEV__: boolean;
+declare const __API_URL__: string;
 
 declare type DeepPartial<T> = T extends Function ? T : (T extends object ? { [P in keyof T]?: DeepPartial<T[P]>; } : T);
 declare type StateSchema = import('./store').StateSchema;

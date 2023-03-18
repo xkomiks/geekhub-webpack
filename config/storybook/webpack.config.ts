@@ -20,7 +20,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
   config.module.rules.push(buildSvgLoader());
 
   config.plugins.push(new webpack.DefinePlugin({
-    __DEV__: true
+    __DEV__: true,
+    __API_URL__: ''
   }));
 
   return config;

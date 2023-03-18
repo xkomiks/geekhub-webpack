@@ -1,12 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { StateSchema } from 'store';
-
 import { counterActions } from '../model/slice/counterSlice';
+import { getCounterValue } from '../model/selectors/getCounterValue';
 
 import styles from './Counter.module.scss';
-import { getCounterValue } from 'modules/Counter/model/selectors/getCounterValue';
 
 interface CounterProps {
 }

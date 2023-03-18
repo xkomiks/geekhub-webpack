@@ -22,7 +22,8 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
     //   openAnalyzer: true
     // })
     new webpack.DefinePlugin({
-      __DEV__: JSON.stringify(options.isDev)
+      __DEV__: JSON.stringify(options.isDev),
+      __API_URL__: JSON.stringify(options.apiUrl)
     }),
   ];
 

@@ -16,13 +16,15 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: React.FC<ButtonProps> = ({
   className,
   variant = ButtonVariant.Primary,
+  disabled,
   children,
   ...rest
 }) => {
   return (
     <button
       {...rest}
-      className={classNames(styles.Button, styles[variant])}
+      className={classNames(styles.Button, styles[variant], disabled && styles.disabled, className)}
+      disabled={disabled}
     >
       {children}
     </button>

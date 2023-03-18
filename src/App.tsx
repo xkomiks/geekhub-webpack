@@ -1,14 +1,18 @@
-import { Counter } from 'modules/Counter';
-
-import UserAvatarIcon from 'assets/icons/user-avatar.svg';
-import userProfile from 'assets/icons/profile.png';
+import { MainPage } from 'pages/MainPage';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { currentUserActions } from 'modules/CurrentUser';
 
 export function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(currentUserActions.initCurrentUser());
+  }, []);
+
   return (
     <div className="app">
-      <img src={userProfile} alt="user profile" />
-      <UserAvatarIcon  />
-      <Counter/>
+      <MainPage/>
     </div>
   );
 }
