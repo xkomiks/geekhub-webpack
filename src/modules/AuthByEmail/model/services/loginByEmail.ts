@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import { CurrentUser, currentUserActions } from 'modules/CurrentUser';
-import { LOCAL_STORAGE_USER_KEY } from 'consts/localStorage';
+import { LOCAL_STORAGE_USER_KEY } from 'shared/consts/localStorage';
 import { ThunkApiConfig } from 'store';
 
 interface LoginByEmailPayload {

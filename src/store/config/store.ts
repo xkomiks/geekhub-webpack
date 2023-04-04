@@ -6,7 +6,7 @@ import { counterReducer } from 'modules/Counter';
 import { currentUserReducer } from 'modules/CurrentUser';
 import { loginReducer } from 'modules/AuthByEmail';
 
-import { $api } from 'api/api';
+import { $api } from 'shared/api/api';
 
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 

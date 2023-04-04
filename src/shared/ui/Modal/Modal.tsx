@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import { Portal } from 'ui/Portal';
+import { Portal } from 'shared/ui/Portal';
 
 import { useMount } from './useMount';
 

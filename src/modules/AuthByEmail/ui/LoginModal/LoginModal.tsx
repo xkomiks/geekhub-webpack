@@ -1,5 +1,5 @@
 import { LoginForm } from 'modules/AuthByEmail/ui/LoginForm/LoginForm';
-import { Modal, ModalProps } from 'ui/Modal';
+import { Modal, ModalProps } from 'shared/ui/Modal';
 
 interface LoginModalProps extends Pick<ModalProps, 'show' | 'onClose'> {
 }

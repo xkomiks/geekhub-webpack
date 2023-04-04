@@ -3,8 +3,8 @@ import { FormEvent } from 'react';
 
 import { useAppDispatch } from 'store';
 
-import { Input } from 'ui/Input';
-import { Button } from 'ui/Button';
+import { Input } from 'shared/ui/Input';
+import { Button } from 'shared/ui/Button';
 
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading';
 import { getLoginFormData } from '../../model/selectors/getLoginFormData';

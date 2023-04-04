@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { classNames } from 'lib/classNames';
+import { classNames } from 'shared/lib/classNames';
 
 import styles from './Button.module.scss';
 

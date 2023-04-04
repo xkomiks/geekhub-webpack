@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LoginModal } from 'modules/AuthByEmail';
 import { currentUserActions, getUserAuthData } from 'modules/CurrentUser';
 
-import { Button } from 'ui/Button';
+import { Button } from 'shared/ui/Button';
 
 export const MainPage = () => {
   const dispatch = useDispatch();

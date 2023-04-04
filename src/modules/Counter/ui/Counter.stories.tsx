@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'lib/storybook/StoreDecorator';
+import { StoreDecorator } from 'shared/lib/storybook/StoreDecorator';
 
 import { Counter } from './Counter';
 
