@@ -34,6 +34,7 @@ const authSlice = createSlice({
       state.user = action.payload;
     })
     builder.addCase(authenticate.rejected, (state) => {
+      localStorage.removeItem(LOCAL_STORAGE_ACCESS_TOKEN_KEY);
       state.isAuthenticationLoading = false;
       state.isLoggingIn = false;
       state.user = undefined;
