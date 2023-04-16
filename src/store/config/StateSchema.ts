@@ -1,12 +1,12 @@
 import { AxiosInstance } from 'axios';
 
-import { CurrentUserSchema } from 'modules/CurrentUser';
+import { AuthSchema } from 'modules/Auth';
 import { LoginSchema } from 'modules/AuthByEmail';
 import { CounterSchema } from 'modules/Counter';
 
 export interface StateSchema {
+  auth: AuthSchema;
   counter: CounterSchema;
-  currentUser: CurrentUserSchema;
   loginForm: LoginSchema;
 }
 

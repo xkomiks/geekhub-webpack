@@ -1,30 +1,29 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+
+import { useAppDispatch } from 'store';
+
+import { authenticate, getAuthIsAuthenticationLoading } from 'modules/Auth';
 
 import { MainPage } from 'pages/MainPage';
-import { currentUserActions } from 'modules/CurrentUser';
 
 export function App() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+  const isAuthenticationLoading = useSelector(getAuthIsAuthenticationLoading);
 
   useEffect(() => {
-    dispatch(currentUserActions.initCurrentUser());
+    dispatch(authenticate());
   }, []);
+
+  if (isAuthenticationLoading) {
+    // TODO: Add loader here
+    return null;
+  }
 
   return (
     <div className="app">
-      <Title>
-        Styled Title
-      </Title>
-
       <MainPage/>
     </div>
   );
 }
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;

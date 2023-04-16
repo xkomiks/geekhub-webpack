@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import { counterReducer } from 'modules/Counter';
-import { currentUserReducer } from 'modules/CurrentUser';
+import { authReducer } from 'modules/Auth';
 import { loginReducer } from 'modules/AuthByEmail';
 
 import { $api } from 'shared/api/api';
@@ -12,8 +12,8 @@ import { StateSchema, ThunkExtraArg } from './StateSchema';
 
 export function createReduxStore(initialState?: StateSchema) {
   const reducer: ReducersMapObject<StateSchema> = {
+    auth: authReducer,
     counter: counterReducer,
-    currentUser: currentUserReducer,
     loginForm: loginReducer
   };
 

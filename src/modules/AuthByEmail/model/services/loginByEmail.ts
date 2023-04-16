@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { CurrentUser, currentUserActions } from 'modules/CurrentUser';
-import { LOCAL_STORAGE_USER_KEY } from 'shared/consts/localStorage';
+import { CurrentUser, authActions } from 'modules/Auth';
+import { LOCAL_STORAGE_ACCESS_TOKEN_KEY } from 'shared/consts/localStorage';
 import { ThunkApiConfig } from 'store';
 
 interface LoginByEmailPayload {
@@ -19,8 +19,8 @@ export const loginByEmail = createAsyncThunk<CurrentUser, LoginByEmailPayload, T
         throw new Error();
       }
 
-      thunkAPI.dispatch(currentUserActions.setCurrentUser(user));
-      localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(user));
+      thunkAPI.dispatch(authActions.setCurrentUser(user));
+      localStorage.setItem(LOCAL_STORAGE_ACCESS_TOKEN_KEY, JSON.stringify(user));
 
       return user;
     } catch (error) {

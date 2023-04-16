@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { LoginModal } from 'modules/AuthByEmail';
-import { currentUserActions, getUserAuthData } from 'modules/CurrentUser';
+import { authActions, getUserAuthData } from 'modules/Auth';
 
 import { Button } from 'shared/ui/Button';
 
@@ -14,7 +14,7 @@ export const MainPage = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
 
   const onLogout = () => {
-    dispatch(currentUserActions.logout());
+    dispatch(authActions.logout());
   };
 
   return (
